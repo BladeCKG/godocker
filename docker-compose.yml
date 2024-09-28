@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  godocker:
+    image: godocker
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - PGUSER=totoro
+      - PGPASSWORD=myfriend
+      - PGHOST=db
+      - PGPORT=26257
+      - PGDATABASE=mydb
+    ports:
+      - 8080:8080
