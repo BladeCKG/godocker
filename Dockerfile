@@ -4,5 +4,5 @@ WORKDIR /app/godockerexample
 COPY . .
 RUN go mod download
 RUN go build -o /godocker
-EXPOSE 8081
+EXPOSE 8080
 CMD [ "/godocker" ]
